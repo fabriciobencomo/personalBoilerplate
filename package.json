@@ -4,9 +4,11 @@
   "description": "\"My personal Boilerplate\"",
   "main": "index.js",
   "scripts": {
+    "backend:build": "node app.js",
+    "backend:development": "nodemon app.js",
     "start": "npm run development",
-    "development": "webpack serve --progress --config webpack.config.development.js",
-    "build": "webpack --progress --config webpack.config.build.js"
+    "frontend:development": "webpack serve --progress --config webpack.config.development.js",
+    "frontend:build": "webpack --progress --config webpack.config.build.js"
   },
   "author": "Fabricio Bencomo",
   "license": "ISC",
@@ -46,5 +48,9 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
   }
 }
