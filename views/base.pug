@@ -1,0 +1,37 @@
+block variables 
+
+doctype.html
+
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0") 
+
+    base(href="/")
+
+    meta(name="desciption" content="Boilerplate")
+
+    link(href="main.css" rel="stylesheet")
+        
+  body
+
+    .preloader
+        p.preloader__text Loader
+
+    .preloader__number
+        .preloader__number__text 0%
+
+    nav.navigation 
+    .navigation__wrapper
+    a.navigationa__link(href="/")
+        | Personal 
+        svg.navigation__link__icon 
+        
+        ul.navigation__list 
+            li.navigation__list__item 
+                a.navigation__list__link(href="about") About 
+            li.navigation__list__item 
+                a.navigation__list__link(href="collections") Collections
+
+    .content#content(data-template=template)
+      block content
