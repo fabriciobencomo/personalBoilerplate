@@ -6,7 +6,7 @@
   "scripts": {
     "backend:build": "node app.js",
     "backend:development": "nodemon app.js",
-    "start": "concurrently --kill-other \"npm run backend:development\" \"npm run frontend:development\"",
+ "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
     "frontend:development": "webpack serve --progress --config webpack.config.development.js",
     "frontend:build": "webpack --progress --config webpack.config.build.js"
   },
@@ -50,8 +50,11 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "@prismicio/client": "^7.11.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "nodemon": "^3.1.7",
+    "prismic-dom": "^2.2.7",
     "pug": "^3.0.3"
   }
 }

@@ -1,7 +1,6 @@
 block variables 
 
-doctype.html
-
+doctype html
 html(lang='en')
   head
     meta(charset="UTF-8")
@@ -12,6 +11,17 @@ html(lang='en')
     meta(name="desciption" content="Boilerplate")
 
     link(href="main.css" rel="stylesheet")
+
+    
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=meta.data.title)
+    meta(property="og:description" content=meta.data.description)
+    meta(property="og:image" content=meta.data.image ? meta.data.image.url : '')
+
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content=meta.data.title)
+    meta(name="twitter:description" content=meta.data.description)
+    meta(name="twitter:image" content=meta.data.image ? meta.data.image.url : '')
         
   body
 
