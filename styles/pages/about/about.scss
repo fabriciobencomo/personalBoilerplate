@@ -1,5 +1,6 @@
 .about{
-    color: purple;
+    background: $color-cadet-blue;
+    color: $color-bright-gray;
 } 
 
 .about__wrapper{
@@ -8,5 +9,12 @@
  
 
 .about__title{
+    @extend %title-110;
+    max-width: 124rem;
+    margin: auto;
+    text-align: center;
 
+    @include media('<phone'){
+        max-width: 67.7rem;
+    }
 }

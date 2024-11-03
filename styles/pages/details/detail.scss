@@ -3,17 +3,34 @@
     @extend %center;
     background-color: $color-quicksand;
     color: $color-quarter-spanish-white;
+
+    @include media('<phone') {
+        height: auto;
+    }
 }
 
 .detail__wrapper{
     align-items: center;
     display: flex;
+
+    @include media('<phone') {
+        display: block;
+        margin: auto;
+        padding: 15rem 0 31.5rem;
+        width: 66.1rem;
+    }
 }
 
 .detail__media{
     width: 55.4rem;
     height: 78.2rem;
     position: relative;
+
+    @include media('<phone') {
+        width: 66.1rem;
+        margin: 0 auto 7.8rem;
+        height: 93.4rem;
+    }
 } 
 
 .detail__media__image{
@@ -23,6 +40,10 @@
 
 .detail__information{
     padding: 8.2rem;
+
+  @include media('<phone') {
+        padding-left: 0;
+    }
 } 
 
 .detail__information__collection{
@@ -39,13 +60,17 @@
 
 .detail__information__content{
     padding-left: 18rem;
+
+  @include media('<phone') {
+        padding-left: 0;
+    }
 } 
 
 .detail__information__highlights{
     margin-top: 6rem;
 } 
 
-.detail__information__highlight{
+.detail__information__highlight {
     align-items: center;
     display: flex;
     &:not(:first-child){
@@ -59,6 +84,12 @@
     height: 4rem;
     margin-right: 3.75rem;
     width: 4rem;
+
+    @include media('<phone') {
+        height: 9.2rem;
+        width: 9.2rem;
+        margin-right: 5.8rem;
+    }
 }
 
 
@@ -83,6 +114,11 @@
     @extend %description-12;
     padding-right: 2.5rem;
     width: 10rem;
+
+    @include media('<phone') {
+        width: 15rem;
+        padding-right: 15rem
+    }
 }
 
 .detail__information__item__description{
@@ -96,4 +132,34 @@
     @extend %title-30;
     display: inline-block;
     margin-top: 3rem;
+
+    @include media('<phone') {
+        font-size: 5.2rem;
+    }
+}
+
+.detail__button{
+    @extend %description-14;
+
+    align-items: center;
+    bottom: 5rem;
+    display: flex;
+    left: 50%;
+    justify-content: center;
+    height: 6rem;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 12.4rem;
+    z-index: 2;
+
+    @include media('<phone') {
+        bottom: 12rem;
+        height: 13rem;
+        width: 26.8rem;
+    }
+}
+
+.detail__button__icon{
+    @extend %cover;
+
 }
